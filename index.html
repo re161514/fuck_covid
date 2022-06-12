@@ -53,10 +53,9 @@
             <!--设置main-->
             <div data-v-40b87e3b="" class="div-main"  style=" border:0px solid red;" >
               <div class='top_main' style=" border:0px solid red; ">
-                <div class='gz'>广州</div>
+                <!-- <div class='gz'>深圳</div> -->
                 <div class="gzt"></div>
-                <div class='name'>火*人</div>
-                <div class="top_zi">成员管理</div>
+                <!-- <div class='name'>赵*彬</div> -->
               </div>
               <div class='top_2_main' style=" border:0px solid red; ">
                  <div class='t2_1 update'>
@@ -80,7 +79,7 @@
                    <div class="top_3_main_1"></div>
                    <div class="top_3_main_2">
                      <div class="top_3_main_2_s"></div>
-                     <div class="top_3_main_2_zi">扫码进场</div>
+                     <!-- <div class="top_3_main_2_zi">扫码进场</div> -->
                    </div>
                    <div class="top_3_main_m"></div>
         
@@ -93,17 +92,17 @@
             
             <!--设置main_2-->
             <div class="second_main">
-              <div data-v-40b87e3b="" class="second-main_1"  style=" border:0px solid red;" >
+              <div data-v-40b87e3b="" class="second-main_1"  style=" color: solid rgb(255, 255, 255);">
               <div class='second-main_1_hsjc'></div>
               <div class='second-main_1_yx'></div>
-              <div class='he_date'><p>2022-4-24 19:23</p></div>
+              <div class='he_date'><p>2022-6-12 19:23</p></div>
               </div>
           
           
               <div data-v-40b87e3b="" class="second-main_2"  style=" border:0px solid red;" >
               <div class='second-main_1_xgym'></div>
               <div class='second-main_1_qcjz'></div>
-              <div class='he_date'><p>2022-4-24</p></div>
+              <div class='he_date'><p>2022-6-12</p></div>
            
              
               </div>
@@ -114,12 +113,12 @@
             
             <!--设置main_2-->
             
-            
+<!--             
             <div class="end_page">
               <p>依托全国一体化政务平台</p>
               <p>实现跨省(区、市)数据共享和互通互认</p>
             </div>
-            
+             -->
             
               <!--小程序头-->
             <div class="stick_h" style=" border:0px solid black;" >
@@ -127,7 +126,7 @@
 
                <div class="third_header"  style=" border:0px solid black;">
                  <div class='tubiao_b'  style=" border:0px solid black;">
-                   <div class="tubiao" onclick="getTimejs()" style=" border:0px solid black;"></div>
+                   <div class="tubiao" onclick="getTimejs2()" style=" border:0px solid black;"></div>
                  
                  </div>
 
@@ -158,7 +157,20 @@
         }
         getTimejs()
       </script>
-      
+           <script>
+
+            function getTimejs2(){
+               var pad=function(x){
+                 x=x.toString();
+                 return x.length==1?'0'+x:x
+               };
+              var d=new Date();
+              document.getElementsByClassName("update")[0].innerHTML=`${pad(d.getMonth()+1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`
+              setTimeout("getTimejs()",1000);
+    
+            }
+            getTimejs2()
+      </script> 
 
 </body> 
 
